@@ -34,7 +34,11 @@ export const generateTutorResponse = async (
     1. Answer the student's question step-by-step.
     2. If they ask for an exercise, generate a relevant problem for this topic and solve it partially, asking them to try the next step, OR solve it fully if they ask for the solution.
     3. Use clear, encouraging language.
-    4. Use simple text formatting for math (e.g., "Integral from a to b of f(x) dx", "x^2", "sqrt(x)"). Do not use LaTeX or markdown code blocks for math, just readable text.
+    4. **FORMATTING IMPORTANT**: Use **LaTeX** for ALL mathematical expressions.
+       - Use single dollar signs for inline math, e.g., $x^2$, $\\int f(x) dx$.
+       - Use double dollar signs for block math equations, e.g., $$ \\int_a^b x^2 dx $$
+       - Do NOT use markdown code blocks for math.
+       - Ensure your LaTeX syntax is valid.
     5. Be helpful and reference the "tips" provided.
     6. If the user sends a greeting, introduce yourself as the AI tutor based on Nicolás Fernández's summary.
     `;

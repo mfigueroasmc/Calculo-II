@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Topic, SubTopic, ChatMessage } from '../types';
 import { generateTutorResponse } from '../services/geminiService';
 import { Send, X, Bot, User, Loader2, Sparkles, AlertTriangle } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 interface TutorInterfaceProps {
     topic: Topic;
@@ -129,13 +132,19 @@ const TutorInterface: React.FC<TutorInterfaceProps> = ({
                                 {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
                             </div>
                             <div className={`
-                                max-w-[85%] p-3 rounded-2xl text-sm md:text-base leading-relaxed whitespace-pre-wrap
+                                max-w-[85%] p-3 rounded-2xl text-sm md:text-base leading-relaxed
                                 ${msg.role === 'user' 
                                     ? 'bg-blue-600 text-white rounded-br-none' 
                                     : 'bg-white text-slate-800 shadow-sm border border-slate-200 rounded-bl-none'}
                                 ${msg.isError ? 'bg-red-50 text-red-600 border-red-200' : ''}
                             `}>
-                                {msg.text}
+                                <div className="markdown-content">
+                                    <ReactMarkdown 
+                                        children={msg.text} 
+                                        remarkPlugins={[remarkMath]} 
+                                        rehypePlugins={[rehypeKatex]}
+                                    />
+                                </div>
                             </div>
                         </div>
                     ))}
