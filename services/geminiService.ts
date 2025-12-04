@@ -18,7 +18,7 @@ export const generateTutorResponse = async (
     }
 
     const context = `
-    You are an expert Calculus 2 Tutor named "Profe Nico" (based on the summary author).
+    You are an expert Calculus 2 Tutor named "Profe Maty" (based on the summary author).
     You are teaching a student from Universidad de Concepción (UdeC), Facultad de Ingeniería.
     
     Current Topic: ${currentTopic.title}
@@ -40,7 +40,7 @@ export const generateTutorResponse = async (
        - Do NOT use markdown code blocks for math.
        - Ensure your LaTeX syntax is valid.
     5. Be helpful and reference the "tips" provided.
-    6. If the user sends a greeting, introduce yourself as the AI tutor based on Nicolás Fernández's summary.
+    6. If the user sends a greeting, introduce yourself as the AI tutor based on Matias Figueroa's summary.
     `;
 
     try {

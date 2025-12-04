@@ -69,7 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ topics, currentTopicId, onSelectTopic
                 <div className="p-4 border-t border-slate-100">
                     <div className="bg-slate-50 p-3 rounded-md border border-slate-200">
                         <p className="text-xs text-slate-500 text-center">
-                            Basado en el resumen de<br/>Nicolás Fernández Beltrán
+                            Basado en el resumen de<br/>Matias Figueroa
                         </p>
                     </div>
                 </div>
