@@ -1,0 +1,5 @@
+{
+  "name": "Cálculo II Master - UdeC Edition",
+  "description": "Aplicación interactiva de enseñanza de Cálculo 2 basada en el resumen de la Facultad de Ingeniería UdeC. Incluye teoría resumida, fórmulas clave y un tutor IA para resolución paso a paso.",
+  "requestFramePermissions": []
+}
